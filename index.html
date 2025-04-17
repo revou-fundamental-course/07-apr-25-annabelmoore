@@ -57,8 +57,16 @@
              </header>
 
              <!-- Our Profile Text -->
-              <article class="section-content">
-                 <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
+              <article class="section-content our-profile">
+                <img src="./assets/pict.jpg" alt="Annabel Moore" class="profile-img">
+                <h3>Annabel Moore</h3>
+                <p class="subtitle">Founder </p>
+                <div class="profile">
+                    "Get Active" began when founder Annabel Moore noticed a growing disconnect between city life and well-being. A lifelong advocate for activity and healthy eating, she started informal hikes and recipe sharing, seeing the positive impact and realizing the need for accessible guidance. This inspired her to create "Get Active," aiming for a holistic, supportive community to make healthy living sustainable and enjoyable, beyond just workouts or diets.
+                    <br><br>
+                    Fueled by this passion and early success, Annabel founded "Get Active" with her own resources and community encouragement. The name reflects her core belief: empowering everyone to actively pursue their well-being. From these small beginnings, driven by a desire to make a difference, "Get Active" has become a dedicated team helping people unlock their potential through movement, nourishment, and a positive mindset.
+                    <br><br>
+                  </div>
               </article>
          </section>
 
@@ -71,9 +79,18 @@
              </header>
 
              <!-- Portofolio Text -->
-             <article class="section-content">
-                 <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
-             </article>
+             <article class="section-content portofolio">
+                <img src="./assets/beforeafter.jpg" alt="Sarah K." class="portofolio-img">
+                <h3>Sarah K.</h3>
+                <p class="subtitle">Testimoni </p>
+                <div class="portofolio">
+                    We understand that every individual's path to well-being is unique. Sarah's experience beautifully illustrates our personalized approach at "Get Active," where we focus on understanding individual needs and creating tailored strategies for lasting success. Witness her incredible transformation.
+                    <br><br>
+                    For years, I struggled with my weight and felt like I was constantly trying fad diets that never lasted. When I found 'Get Active,' it was different. It wasn't just about restrictive eating or intense workouts that felt unsustainable. The team at 'Get Active' helped me understand the importance of balanced nutrition and finding physical activities I actually enjoyed. Sarah's personalized guidance and the supportive community made all the difference. They focused on building healthy habits that fit into my lifestyle. Slowly but surely, the weight started to come off, but more importantly, I feel so much healthier, more energetic, and more confident in my own skin. 'Get Active' gave me the tools and the encouragement to make lasting changes, and I'm so grateful for their support in my journey to a healthier and happier me." - Sarah K.
+                    <br><br>
+
+                </div>
+            </article>
          </section>
 
          <hr />
@@ -85,17 +102,42 @@
              </header>
 
              <!-- Message Us Form -->
-             <form>
-                 <div>
-                     <label for="name">Name:</label>
-                     <!-- Inputan yang wajib diisi -->
-                     <input type="text" id="name" name="name" required>
-                 </div>
+             <article class="section-content message-us-container">
+                <form id="message-us-form" class="message-us-form">
+                    <label>
+                        Name :
+                        <input type="text" id="name" placeholder="Name" required />
+                    </label>
 
-                 <div>
-                     <button type="button" onclick="validateForm()">Submit</button>
-                 </div>
-             </form>
+                    <label>
+                        Date of Birth :
+                        <input type="date" id="dob" required />
+                    </label>
+
+                    <label>
+                        Gender :
+                        <div class="gender-options">
+                            <label><input type="radio" name="gender" value="Male" required /> Male</label>
+                            <label><input type="radio" name="gender" value="Female" /> Female</label>
+                        </div>
+                    </label>
+
+                    <label>
+                        Message :
+                        <textarea id="message" placeholder="Message" required></textarea>
+                    </label>
+
+                    <button type="submit">Submit</button>
+                </form>
+
+                <div id="message-us-result" class="message-us-result">
+                    <p><strong>Current time</strong> : <span id="current-time"></span></p>
+                    <p><strong>Name</strong> : <span id="result-name">-</span></p>
+                    <p><strong>Date of Birth</strong> : <span id="result-dob">-</span></p>
+                    <p><strong>Gender</strong> : <span id="result-gender">-</span></p>
+                    <p><strong>Message</strong> : <span id="result-message">-</span></p>
+                </div>
+            </article>
          </section>
      </main>
 
@@ -103,7 +145,7 @@
 
      <!-- Footer Content -->
      <footer>
-         <span>Made by Annabel Moore</span>
+         <span>Created by Annabel Moore</span>
      </footer>
      
      <!-- JS Eksternal -->

@@ -24,6 +24,27 @@ function validateForm() {
     }
 }
 
+// Submit Form
+document
+  .getElementById("message-us-form")
+  .addEventListener("submit", handleFormSubmit);
+
+function handleFormSubmit(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const dob = document.getElementById("dob").value;
+  const gender = document.querySelector('input[name="gender"]:checked')?.value;
+  const message = document.getElementById("message").value;
+  const timeNow = new Date().toString();
+
+  document.getElementById("result-name").innerText = name;
+  document.getElementById("result-dob").innerText = dob;
+  document.getElementById("result-gender").innerText = gender;
+  document.getElementById("result-message").innerText = message;
+  document.getElementById("current-time").innerText = timeNow;
+}
+
 let indexBanner = 0;
 
 function nextBanner() {
